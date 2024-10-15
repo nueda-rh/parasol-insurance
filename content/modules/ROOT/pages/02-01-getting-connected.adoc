@@ -1,55 +1,42 @@
 = Getting connected
 include::_attributes.adoc[]
 
-For the purposes of this training session, we have provisioned a single {ocp} cluster, with {rhoai} deployed on it.
+このトレーニング セッションでは、 {rhoai} がデプロイされた単一の {ocp} クラスターをプロビジョニングしました。
 
-Each person attending this lab will have a unique user account in which to do their work.
+モデルは GPU ではなく CPU でホストされるため、この特定のラボは個人によるデモとして使用する必要があります。LLM は CPU では動作が遅く、LLM をクエリしようとするとこのデモでそのことがわかります。
 
-== Environment information
+== 環境情報
 
-If you are using the customized version of the instructions, the information below will render properly. If not, you will see placeholder values instead.
+カスタマイズされたバージョンの手順を使用している場合は、以下の情報が正しく表示されます。そうでない場合は、代わりにプレースホルダー値が表示されます。
 
-* Your account id: `{user}`
-* Your password: `{password}`
+* アカウント ID: `{user}`
+* パスワード: `{password}`
 
-In a new window or tab, open the following URL and log in:
+新しいウィンドウまたはタブで、次の URL を開いてログインします:
 
-* The {rhoai} Dashboard URL for our shared environment:
+* 共有環境の Red Hat {rhoai} ダッシュボード URL:
 ** https://rhods-dashboard-redhat-ods-applications.{openshift_cluster_ingress_domain}/[https://rhods-dashboard-redhat-ods-applications.{openshift_cluster_ingress_domain}/,window=_blank]
-* Click on the `Login with OpenShift` button:
+* `Login with OpenShift` ボタンをクリックしてください
 +
 [.bordershadow]
 image::02/02-01-login3.png[width=50%]
-* Enter your credentials (as detailed above)
-* The result should look like:
+* 下に示されている通りあなたの資格情報を入力してください
+* 結果はこのようになります:
 +
 [.bordershadow]
 image::02/02-01-login1.png[width=50%]
 
-* Because the password is so simple (`{password}`), your browser might display a scary message such as:
+* パスワードが非常に単純なため (`{password}`)、ブラウザに次のような恐ろしいメッセージが表示される場合があります:
 +
 [.bordershadow]
 image::02/02-01-login-scary.png[]
-* It is safe here to ignore this message when it pops up.
+*このメッセージが表示されたら無視しても問題ありません。
 
-* After you authenticate, the result should look like:
+* 認証後、結果は次のようになります:
 +
 [.bordershadow]
 image::02/02-01-rhoai-front-page.png[]
 
-If you got this far and saw all that, congratulations, you properly connected to the {rhoai} Dashboard Application!
+ここまで読み進めてすべてを確認できた場合は、おめでとうございます。 {rhoai} ダッシュボード アプリケーションに正しく接続されています。
 
-We are now ready to start the {ic}.
-
-== Getting Support during Red Hat Summit
-
-* In the room:
-** Some very kind colleagues of ours will be walking around in the room, to help and/or answer questions.
-** If you run into a particular issue, call out to one of them and quietly explain what the issue is.
-
-// ** If they are unsure or if it's likely to be a long explanation, they might ask you to "post the question in slack" instead. (see below)
-// * Over Slack:
-// ** We have a dedicated Slack Channel where more colleagues (who kindly agreed to stay up late) will try to answer questions.
-// ** Head over to the slack channel called https://redhat.enterprise.slack.com/archives/C066EQ8LWBS[#rh1-insurance-claims-lab,window=_blank]
-// ** Post a message such as `I am userX and I have an issue with exercise number 2.4`
-// ** Use the https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-[threads,window=_blank] feature in slack to then post a screenshot of a description of the issue, in-thread.
+これで {ic} を開始する準備ができました。

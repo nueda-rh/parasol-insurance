@@ -1,29 +1,29 @@
 = Working with the {ocp} Terminal
 include::_attributes.adoc[]
 
-To deploy the application, you will use the {ocp} Web Terminal. +
-This is a web-based terminal that allows you to execute commands on the {ocp-short} cluster from the {ocp-short} Console.
+アプリケーションをデプロイするには、 {ocp} Web ターミナルを使用します。+
+これは、 {ocp-short} コンソールから {ocp-short} クラスターでコマンドを実行できる Web ベースのターミナルです。
 
-== Opening the {ocp} Console
+== {ocp} コンソールを開く
 
-- Access the {ocp-short} Console via this link:
+- 次のリンクから {ocp-short} コンソールにアクセスします:
 +
 [.bordershadow]
 image::05/01-openshift-console.png[]
 
-- When prompted, enter your credentials.
+- プロンプトが表示されたら、認証情報を入力します。
 
-== Open a Web Terminal
+== Web ターミナルを開く
 
-- On the {ocp-short} Console, click on the Web Terminal icon in the top right corner:
+- {ocp-short} コンソールで、右上隅にある Web ターミナル アイコンをクリックします:
 +
 [.bordershadow]
 image::05/web-term-1.png[]
 
-- Then, choose your existing project and click start:
+- 次に、既存のプロジェクトを選択して [**開始**]/[**Start**] をクリックします:
 +
 [.bordershadow]
 image::05/web-term-2.png[]
 
-- After a few seconds, a Terminal interface will open.
-- This is where you will execute the commands in the next steps.
+- 数秒後、ターミナル インターフェイスが開きます。
+- ここで、次の手順でコマンドを実行します。
