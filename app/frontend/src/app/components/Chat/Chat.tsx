@@ -15,17 +15,18 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
     type MessageHistory = Message[];
 
     const [queryText, setQueryText] = React.useState<Query>('');
-    const [answerText, setAnswerText] = React.useState<Answer>([' Hi! I am Parasol Assistant. How can I help you today?']);
+    const [answerText, setAnswerText] = React.useState<Answer>(['こんにちは！私はパラソルアシスタントです。何かお困りのことはありますか？']);
     const [answerSources, setAnswerSources] = React.useState<string[]>([]); // Array of sources for the answer
     const [messageHistory, setMessageHistory] = React.useState<MessageHistory>([]);
 
-    const wsUrl = config.backend_api_url.replace(/http/, 'ws').replace(/\/api$/, '/ws');
+    // const wsUrl = config.backend_api_url.replace(/http/, 'ws').replace(/).replace(/\/api$/, '');
+    const wsUrl = config.backend_api_url.replace(/http/, 'ws').replace(/-app-/, '-chatbot-').replace(/\/api$/, '');
 
     const connection = React.useRef<WebSocket | null>(null);
     const chatBotAnswer = document.getElementById('chatBotAnswer');
 
     React.useEffect(() => {
-        const ws = new WebSocket(wsUrl + '/query') || {};
+        const ws = new WebSocket(wsUrl + '/chatbot') || {};
 
         ws.onopen = () => {
             console.log('opened ws connection')
@@ -89,7 +90,7 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
     const resetMessageHistory = () => {
         setMessageHistory([]);
         setAnswerSources([]);
-        setAnswerText(['Hi! I am Parasol Assistant. How can I help you today?']);
+        setAnswerText(['こんにちは！私はパラソルアシスタントです。何かお困りのことはありますか？']);
     };
 
     return (
@@ -152,7 +153,7 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
                                         type="text"
                                         onChange={(_event, queryText) => setQueryText(queryText)}
                                         aria-label="query text input"
-                                        placeholder='Ask me anything...'
+                                        placeholder='質問をを入力して下さい。'
                                         onKeyPress={event => {
                                             if (event.key === 'Enter') {
                                                 event.preventDefault();
@@ -163,14 +164,14 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
                                     <Flex>
                                         <FlexItem>
                                             <Tooltip
-                                                content={<div>Start a new chat</div>}
+                                                content={<div>新しいチャットをを開始</div>}
                                             >
                                                 <Button variant="link" onClick={resetMessageHistory} aria-label='StartNewChat'><FontAwesomeIcon icon={faPlusCircle} /></Button>
                                             </Tooltip>
                                         </FlexItem>
                                         <FlexItem align={{ default: 'alignRight' }}>
                                             <Tooltip
-                                                content={<div>Send your query</div>}
+                                                content={<div>質問をを送信</div>}
                                             >
                                                 <Button variant="link" onClick={sendQueryText} aria-label='SendQuery'><FontAwesomeIcon icon={faPaperPlane} /></Button>
                                             </Tooltip>
@@ -182,7 +183,7 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
                     </StackItem>
                     <StackItem>
                         <TextContent>
-                            <Text className='chat-disclaimer'>Powered by AI. It may display inaccurate info, so please double-check the responses.</Text>
+                            <Text className='chat-disclaimer'>AIによって動作しています。情報が正確でない場合があるため、念のため回答をご確認ください。</Text>
                         </TextContent>
                     </StackItem>
                 </Stack>
