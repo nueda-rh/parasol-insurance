@@ -23,7 +23,7 @@ image::02/02-03-open-link.png[]
 [.bordershadow]
 image::02/02-02-accept.png[]
 
-* [.bordershadow] * 選択した権限を許可*をクリックします。
+* [Allow selected permissions]をクリックします。
 * 次の画面が表示されます。
 +
 [.bordershadow]
