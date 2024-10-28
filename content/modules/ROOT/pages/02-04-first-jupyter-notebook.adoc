@@ -60,4 +60,4 @@ image::02/02-05-new_notebook.png[alt text]
 
 。追加のリソース
 
-* ノートブックについてさらに詳しく知りたい場合は、https://jupyter.org/[Jupyterサイト、ウィンドウ=_blank]にアクセスしてください。
+* ノートブックについてさらに詳しく知りたい場合は、https://jupyter.org/[Jupyterサイト,window=_blank]にアクセスしてください。
