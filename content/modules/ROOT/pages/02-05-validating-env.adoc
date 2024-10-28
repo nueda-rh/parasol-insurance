@@ -9,9 +9,9 @@ include::_attributes.adoc[]
 
 . `02-05-validating.ipynb`というノートブックを開きます。
 
-Jupyter NotebookでCellsを実行したことがない場合は、以下の操作が必要です。..
+Jupyter NotebookでCellsを実行したことがない場合は、以下の操作が必要です。
 
- **「Kernelを再起動してすべてのCellsを実行」**リンクをクリックします。
+.. **Restart kernel and Run all Cells** リンクをクリックします。
 +
 [.bordershadow]
 image::02/02-05-restart-and-run.png[]
