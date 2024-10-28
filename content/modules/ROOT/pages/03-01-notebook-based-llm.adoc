@@ -3,6 +3,6 @@ include::_attributes.adoc[]
 
 この演習では、ノートブックを使用して LLM の使用方法を調べます。
 
-`insurance-claim-processing-partners/lab-materials/03` フォルダーから、`03-01-nb-llm-example.ipynb` というノートブックを開き、指示に従ってください。
+`parasol-insuarance/lab-materials/03` フォルダーから、`03-01-nb-llm-example.ipynb` というノートブックを開き、指示に従ってください。
 
 完了したら、ノートブックを閉じて次のページに進むことができます。ß
