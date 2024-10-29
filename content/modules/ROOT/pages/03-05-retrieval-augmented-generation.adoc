@@ -9,7 +9,7 @@ LLMは非常に優れたツールですが、その能力は、トレーニン�
 - この新しい情報でモデルを微調整する。これにははるかに少ないリソースしか必要とせず、通常は数時間または数分で完了します（モデルのサイズによります）。ただし、モデルの再トレーニングは行われないため、新しい情報が回答に完全に統合されない場合があります。微調整は、特定の文脈や語彙のより深い理解を得ることに優れていますが、新しい知識の追加にはやや劣ります。また、情報を追加する場合は、いずれにしてもモデルの再トレーニングと再展開を行う必要があります。
 この新しい情報をデータベースに入れ、クエリーに関連する部分を抽出して、LLMに送信する前にこのクエリーにコンテクストとして追加します。この技術は、**Retrieval Augmented Generation（RAG）**と呼ばれています。この新しい知識を活用するためにモデルを再トレーニングしたり、微調整する必要がないため、いつでも簡単に更新できるという点で興味深いものです。
 
-https://milvus.io/[Milvus,window=_blank] を使用してベクトルデータベースをすでに用意しており、https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/[California Driver's Handbook,window=_blank] の内容を (https://www.ibm.com/topics/embedding[Embeddings,window=_blank] の形式で) 格納しています。
+https://milvus.io/[Milvus,window=_blank] を使用してベクトルデータベースをすでに用意しており、 https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/[California Driver's Handbook,window=_blank] の内容を ( https://www.ibm.com/topics/embedding[Embeddings,window=_blank] の形式で) 格納しています。
 
 この演習では、RAGテクニックを使用して**請求に関するいくつかのクエリを実行**し、LLMを修正することなく、この新しい知識がどのように役立つかを確認します。
 
