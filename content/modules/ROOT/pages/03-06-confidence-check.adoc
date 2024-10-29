@@ -10,7 +10,7 @@ include::_attributes.adoc[]
 
 `parasol-insurance/lab-materials/03/06` フォルダには、2つのパイプラインファイル、`confidence_check.pipeline` と `confidence_check.yaml` ファイルがあります。
 
-.pipeline`ファイルはElyraで開いて視覚的に修正し、実行することができます。一方、`.yaml`ファイルはRHOAIダッシュボードからパイプラインサーバーにインポートすることができます。
+`.pipeline` ファイルはElyraで開いて視覚的に修正し、実行することができます。一方、 `.yaml` ファイルはRHOAIダッシュボードからパイプラインサーバーにインポートすることができます。
 ここでは、Elyraでパイプラインを実行します。
 
 == Elyraとは？
@@ -44,11 +44,11 @@ image::03/07-elyra-pipeline.png[elyra confidence pipeline]
 .パイプラインが保存されていないという警告が表示される場合がありますが、これは正常な動作です。この場合は、**[保存して送信]** をクリックしてください。
 +
 [.bordershadow]
-image::03/03-06-unsaved-changes.png[]。
+image::03/03-06-unsaved-changes.png[]
 .次のポップアップでは、名前を変更せずに **[OK]** をクリックします。
 +
 [.bordershadow]
-image::03/03-07-run-pipeline-ok.png[]。
+image::03/03-07-run-pipeline-ok.png[]
 
 .「**ジョブの Data Science Pipelines への送信に成功しました」**というポップアップが表示されたら、「**詳細の実行」**リンクをクリックして、パイプラインの進行状況を確認します。
 
