@@ -66,6 +66,7 @@ while true; do git push demo translation-jp:main 2>/dev/null; if [ $? -eq 0 ]; t
 #oc apply -f secret_aws-connection-shared-minio.yaml -n ${USER}
 #while true; do oc get secret/aws-connection-shared-minio -n ${USER} 2>&1 | grep "not found" 1>/dev/null 2>&1; if [ $? -eq 0 ]; then echo "secret/aws-connection-shared-minio does not exist yet. waiting..."; sleep 3; continue; else break; fi; done
 
+oc apply -f secret_aws-connection-shared-minio.yaml -n ic-shared-llm
 oc apply -f job_setup_objectstorage.yaml -n ic-shared-llm
 while true; do oc get job/setup-objectstorage -n ic-shared-llm 2>&1 | grep "not found" 1>/dev/null 2>&1; if [ $? -eq 0 ]; then echo "job/setup-objectstorage does not exist yet. waiting..."; sleep 3; continue; else break; fi; done
 oc wait --for=jsonpath='{.status.ready}'=1 --timeout 20m job/setup-objectstorage -n ic-shared-llm
@@ -73,7 +74,7 @@ oc wait --for=jsonpath='{.status.active}'=1 --timeout 20m job/setup-objectstorag
 oc logs -f job/setup-objectstorage -n ic-shared-llm
 oc wait --for=jsonpath='{.status.succeeded}'=1 --timeout 20m job/setup-objectstorage -n ic-shared-llm
 
-#oc label namespace/${USER} modelmesh-enabled=false
+oc label namespace/ic-shared-llm modelmesh-enabled=false
 
 oc apply -f servingruntime_llama-3-elyza-jp-8b-vllm.yaml -n ic-shared-llm
 #oc apply -f servingruntime_accident-detect-kserve-ovms.yaml -n ${USER}
@@ -84,8 +85,8 @@ oc apply -f inferenceservice_llama-3-elyza-jp-8b.yaml -n ic-shared-llm
 
 #while true; do oc get inferenceservices/accident-detect -n ${USER} 2>&1 | grep "not found" 1>/dev/null 2>&1; if [ $? -eq 0 ]; then echo "inferenceservices/accident-detect does not exist yet. waiting..."; sleep 3; continue; else break; fi; done
 #oc wait --for=jsonpath='{.status.modelStatus.transitionStatus}'=UpToDate --timeout 15m inferenceservices/accident-detect -n ${USER}
-while true; do oc get inferenceservices/llama-3-elyza-jp-8b -n ${USER} 2>&1 | grep "not found" 1>/dev/null 2>&1; if [ $? -eq 0 ]; then echo "inferenceservices/llama-3-elyza-jp-8b does not exist yet. waiting..."; sleep 3; continue; else break; fi; done
-oc wait --for=jsonpath='{.status.modelStatus.transitionStatus}'=UpToDate --timeout 30m inferenceservices/llama-3-elyza-jp-8b -n ${USER}
+while true; do oc get inferenceservices/llama-3-elyza-jp-8b -n ic-shared-llm 2>&1 | grep "not found" 1>/dev/null 2>&1; if [ $? -eq 0 ]; then echo "inferenceservices/llama-3-elyza-jp-8b does not exist yet. waiting..."; sleep 3; continue; else break; fi; done
+oc wait --for=jsonpath='{.status.modelStatus.transitionStatus}'=UpToDate --timeout 30m inferenceservices/llama-3-elyza-jp-8b -n ic-shared-llm
 #while true; do oc get inferenceservices/faster-whisper-large-v3 -n ${USER} 2>&1 | grep "not found" 1>/dev/null 2>&1; if [ $? -eq 0 ]; then echo "inferenceservices/faster-whisper-large-v3 does not exist yet. waiting..."; sleep 3; continue; else break; fi; done
 #oc wait --for=jsonpath='{.status.modelStatus.transitionStatus}'=UpToDate --timeout 30m inferenceservices/faster-whisper-large-v3 -n ${USER}
 

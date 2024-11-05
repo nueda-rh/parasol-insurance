@@ -36,7 +36,7 @@ spec:
               rm -rf Llama-3-ELYZA-JP-8B/.git
               aws s3 cp --recursive Llama-3-ELYZA-JP-8B s3://models/Llama-3-ELYZA-JP-8B
               curl -o accident_detect.onnx https://rhods-public.s3.amazonaws.com/demo-models/ic-models/accident/accident_detect.onnx
-              aws s3 cp accident_detect.onnx s3://models/accident_detect/1/accident_detect.onnx
+              aws s3 cp accident_detect.onnx s3://models/accident/accident_detect.onnx
               git clone https://huggingface.co/Systran/faster-whisper-large-v3
               rm -rf faster-whisper-large-v3/.git
               aws s3 cp --recursive faster-whisper-large-v3 s3://models/faster-whisper-large-v3
