@@ -1,4 +1,4 @@
 #!/bin/bash
 
-oc apply -f .
+echo "GPU & NFD Operators are already setup."
 
