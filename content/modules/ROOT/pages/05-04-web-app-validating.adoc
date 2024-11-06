@@ -25,7 +25,7 @@ image::05/original-app-1.png[]
 [.bordershadow]
 image::05/claims-link.png[]
 
-これで、アプリケーションで受け取ったすべての請求のリストが手に入りました。各クレームに移動し（件名をクリック）、クレームを移動したり添付された画像を確認したりするのに便利なインターフェースが備わっており、インターフェースがより使いやすくなっていることがわかります。
+これで、アプリケーションで受け取ったすべての請求のリストが手に入りました。各請求に移動し（件名をクリック）、請求を移動したり添付された画像を確認したりするのに便利なインターフェースが備わっており、インターフェースがより使いやすくなっていることがわかります。
 
 [.bordershadow]
 image::05/new-app-claims.png[]
@@ -40,8 +40,7 @@ image::05/new-app-1.png[]
 [.bordershadow]
 image::05/new-app-chat-icon.png[]
 
-The assistant will open and you can ask it questions about the claim. As we have seen in the RAG notebook, the assistant can rely on some documentation to answer your questions. For example, on claim **CLM202401** Try with: "Did Daniel have the right to pass at the red light?".
-アシスタントが開き、クレームに関する質問をすることができます。RAGノートブックで見たように、アシスタントはいくつかの文書に頼って質問に回答することができます。例えば、 **CLM202401** という請求の場合、「 Did Daniel have the right to pass at the red light? 」と入力してみてください。
+アシスタントが開き、請求に関する質問をすることができます。RAGノートブックで見たように、アシスタントはいくつかの文書に頼って質問に回答することができます。例えば、 **CLM202401** という請求の場合、「 Did Daniel have the right to pass at the red light? 」と入力してみてください。
 
 [.bordershadow]
 image::05/new-app-chat.png[]
