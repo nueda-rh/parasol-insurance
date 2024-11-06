@@ -5,12 +5,9 @@ include::_attributes.adoc[]
 
 ワークベンチで：
 
-左側のナビゲーションメニューで、次のフォルダに移動します：`parasol-insurance/lab-materials/02`
-
-. `02-05-validating.ipynb`というノートブックを開きます。
-
-Jupyter NotebookでCellsを実行したことがない場合は、以下の操作が必要です。
-
+. 左側のナビゲーションメニューで、次のフォルダに移動します：`parasol-insurance/lab-materials/02`
+. `02-05-validating.ipynb` というノートブックを開きます。
+. Jupyter NotebookでCellsを実行したことがない場合は、以下の操作が必要です。
 .. **Restart kernel and Run all Cells** リンクをクリックします。
 +
 [.bordershadow]
@@ -37,7 +34,7 @@ image::02/02-05-restart-kernel.png[]
 
 このノートブックの出力が疑わしい場合は、 {ic} の開催者に連絡してください。
 
-全体像
+== 全体像
 
 これは、環境がどのようにレイアウトされているかを視覚化した要約です。
 
