@@ -13,6 +13,6 @@ https://milvus.io/[Milvus,window=_blank] を使用してベクトルデータベ
 
 この演習では、RAGテクニックを使用して**請求に関するいくつかのクエリを実行**し、LLMを修正することなく、この新しい知識がどのように役立つかを確認します。
 
-`parasol-insurance/lab-materials/03`フォルダから、`03-05-retrieval-augmented-generation.ipynb`というノートブックを開き、指示に従ってください。
+`parasol-insurance/lab-materials/03` フォルダから、 `03-05-retrieval-augmented-generation.ipynb` というノートブックを開き、指示に従ってください。
 
 完了したら、ノートブックを閉じて次のページに進みます。
