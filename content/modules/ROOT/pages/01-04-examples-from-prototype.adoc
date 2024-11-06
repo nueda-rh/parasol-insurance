@@ -5,7 +5,7 @@ include::_attributes.adoc[]
 
 == テキスト要約に LLM を使用する
 
-* クレーム査定担当者が迅速に読み取れる
+* 請求査定担当者が迅速に読み取れる
 +
 [.bordershadow]
 image::01/proto-summary.png[test image]
@@ -19,7 +19,7 @@ image::01/proto-info-extract.png[ info extraction]
 
 == 感情分析に LLM を使用する
 
-* テキストのトーンを検出し、それに基づいて行動する。
+* テキストの感情を検出し、それに基づいて行動する。
 +
 [.bordershadow]
 image::01/proto-sentiment-analysis.png[]
