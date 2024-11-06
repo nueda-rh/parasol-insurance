@@ -2,7 +2,7 @@
 include::_attributes.adoc[]
 
 == What will the pipeline do?
-Web アプリがデプロイされたので、まだ処理されていないクレームがあることがわかります。 
+Web アプリがデプロイされたので、まだ処理されていない請求があることがわかります。 
 
 [.bordershadow]
 image::05/05-new-app-claim-unprocessed.jpg[]
@@ -26,11 +26,11 @@ image::05/05-process-claims-yaml.jpg[]
 
 * *get_claims* - データベースに接続し、未処理の請求を取得して、ファイル `claims.json` を通じて他のタスクに渡されるリストに追加します。
 * 次のスクリプトは、処理する必要があるすべての請求を調べ、テキストの本文全体を使用して重要な機能を見つけ、結果をデータベースにプッシュします:
-** *get_location* - Finds the location of the accident
-** *get_accident_time* - Finds the time of the accident
-** *summarize_text* - Makes a short summary of the text
-** *get_sentiment* - Gets the sentiment of the text
-* *detect_objects* - Downloads the images of the claim and uses the served object-detection model to classify the damages in the image
+** *get_location* - 事故発生場所を検索
+** *get_accident_time* - 事故発生時刻の検索
+** *summarize_text* - 本文を短く要約する
+** *get_sentiment* - テキストの感情を取得する
+* *detect_objects* - 請求の画像をダウンロードし、提供された物体検出モデルを使用して画像内の損害を分類する。
 
 NOTE: フォルダーには、参照用に Elyra バージョンのパイプライン (`process_claims.pipeline`) が残っていますが、VSCode から実際に使用すること
 
@@ -49,7 +49,7 @@ image::05/05-switch-to-admin-view.jpg[]
 [.bordershadow]
 image::05/05-PVC.png[go to PVC]
 
-* Make sure you are in the right project (your username) and then press **Create PersistentVolumeClaim**
+* 正しいプロジェクト（ユーザー名）に入っていることを確認し、 **Create PersistentVolumeClaim** を押します。
 +
 [.bordershadow]
 image::05/05-create-pvc-button.jpg[PVC を作成]
@@ -80,7 +80,7 @@ Shared access (RWX)
 [subs=attributes+]
 1 GiB
 
-* it should look like:
+* 次のようになります:
 +
 [.bordershadow]
 image::05/05-PVC-settings.png[PVC settings]
@@ -97,7 +97,7 @@ image::05/05-PVC-settings.png[PVC settings]
 // image::05/05-download-process-yaml.png[download process claims yaml]
 // 次に、データサイエンスプロジェクトに移動し、インポートパイプラインを押します。
 
-* まず、`process_claims.yaml`ファイルをラップトップにダウンロードします
+* まず、 `process_claims.yaml` ファイルをラップトップにダウンロードします
 ** VSCodeワークベンチでファイルを右クリックし、 **Download** を選択します
 ** ファイルをラップトップ上のどこかに保存します
 * 次に、 {rhoai} ダッシュボードに移動します
@@ -161,7 +161,6 @@ image::05/05-run-settings-create-pipeline.png[run settings]
 
 * claim_id を変更すると、処理する請求を変更することができます。未処理の請求をすべて処理するために、これを 0 に設定しました。
 
-* Click **Create** and watch it run
 * **Create** をクリックして実行する様子をご覧ください
 +
 [.bordershadow]
@@ -175,7 +174,7 @@ image::05/05-process-claims.jpg[process]
 [.bordershadow]
 image::05/05-process-claim3-app.jpg[claim3processed]
 
-* 最後のクレームをクリックしてください
+* 最後の請求をクリックしてください
 * 長い本文ではなく、概要、場所、事故時刻、感情のフィールドが表示されます
 * また、損害箇所を示す四角形が付いた新しい画像もご覧いただけます
 +
