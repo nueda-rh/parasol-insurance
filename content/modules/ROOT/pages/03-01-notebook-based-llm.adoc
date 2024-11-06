@@ -5,4 +5,4 @@ include::_attributes.adoc[]
 
 `parasol-insuarance/lab-materials/03` フォルダーから、`03-01-nb-llm-example.ipynb` というノートブックを開き、指示に従ってください。
 
-完了したら、ノートブックを閉じて次のページに進むことができます。ß
+完了したら、ノートブックを閉じて次のページに進むことができます。
