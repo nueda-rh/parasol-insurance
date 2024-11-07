@@ -54,6 +54,7 @@ while true; do oc get statefulset/git -n git 2>&1 | grep "not found" 1>/dev/null
 oc wait --for jsonpath='{.status.availableReplicas}'=1 --timeout 5m statefulset/git -n git
 
 git_url="https://$(oc get route/git -n git -o jsonpath='{.spec.host}')/parasol-insurance"
+git remote rm demo
 git remote add demo ${git_url}
 #git checkout -b transcription origin/transcription 2>/dev/null
 while true; do git push demo translation-jp:main 2>/dev/null; if [ $? -eq 0 ]; then break; else sleep 3; fi; done
@@ -92,6 +93,7 @@ oc wait --for=jsonpath='{.status.modelStatus.transitionStatus}'=UpToDate --timeo
 
 pwd=$(pwd)
 cd /tmp
+rm -rf ./parasol-insurance
 git clone ${git_url}
 cd parasol-insurance
 git checkout -b main 2>/dev/null
