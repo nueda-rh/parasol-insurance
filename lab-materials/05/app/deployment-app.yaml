@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: insurance-claim-app
-          image: quay.io/mmuraki/parasol_insurance_app:latest
+          image: quay.io/jishikaw/parasol_insurance_app:latest
           ports:
             - containerPort: 5000
               protocol: TCP
