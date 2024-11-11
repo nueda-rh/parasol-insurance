@@ -19,8 +19,8 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
     const [answerSources, setAnswerSources] = React.useState<string[]>([]); // Array of sources for the answer
     const [messageHistory, setMessageHistory] = React.useState<MessageHistory>([]);
 
-    // const wsUrl = config.backend_api_url.replace(/http/, 'ws').replace(/).replace(/\/api$/, '');
-    const wsUrl = config.backend_api_url.replace(/http/, 'ws').replace(/-app-/, '-chatbot-').replace(/\/api$/, '');
+    const wsUrl = config.backend_api_url.replace(/http/, 'ws').replace(/).replace(/\/api$/, '');
+    // const wsUrl = config.backend_api_url.replace(/http/, 'ws').replace(/-app-/, '-chatbot-').replace(/\/api$/, '');
 
     const connection = React.useRef<WebSocket | null>(null);
     const chatBotAnswer = document.getElementById('chatBotAnswer');
@@ -72,7 +72,7 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
             setAnswerText([]); // Clear the previous response
             setAnswerSources([]); // Clear the previous sources
             // Put the query in a JSON object so that we can add other info later
-            if (queryText != "" ) {
+            if (queryText != "") {
                 let data = {
                     query: queryText,
                     claim: claimSummary
@@ -80,10 +80,10 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
                 connection.current?.send(JSON.stringify(data)); // Send the query to the server
             } else {
                 setAnswerText(['Please enter a query...']);
-             }
-            
-            
-            
+            }
+
+
+
         };
     }
 
