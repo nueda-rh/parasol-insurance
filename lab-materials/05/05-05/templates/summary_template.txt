@@ -1,5 +1,5 @@
 <s>[INST] <<SYS>>
-Summarize the below car insurance claim:
+以下の自動車保険請求の内容を要約してください：
 <</SYS>>
 {car_claim}
 [/INST]

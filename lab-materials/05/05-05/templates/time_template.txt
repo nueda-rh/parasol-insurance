@@ -1,9 +1,9 @@
 <s>[INST] <<SYS>>
-What time and date did the accident described in the text happen?
-Responde with just the time and date.
-If unknown, simply write Unknown.
+以下の文章に記載された事故はいつ発生しましたか？
+時刻と日付のみお答えください。
+不明な場合は「不明」と記載してください。
 
-Text:
+文章：
 <</SYS>>
 {car_claim}
 [/INST]

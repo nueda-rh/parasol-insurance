@@ -1,8 +1,8 @@
 <s>[INST] <<SYS>>
-Where did the accident happen in the below car claim?
-Responde with just the location.
+以下の自動車保険請求において、事故はどこで発生しましたか？
+場所に関する情報のみお答えください。
 
-Car claim:
+自動車保険請求：
 <</SYS>>
 {car_claim}
 [/INST]

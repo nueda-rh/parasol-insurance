@@ -1,8 +1,8 @@
 <s>[INST] <<SYS>>
-Is the predominant sentiment of the customer in the following text positive, negative, or neutral?
-Respond in one word: Positive, Negative, or Neutral.
+以下の文章における顧客の主な感情は、ポジティブ、ネガティブ、またはニュートラルのどれですか？
+一言でお答えください：ポジティブ、ネガティブ、またはニュートラル。
 
-Text:
+文章：
 <</SYS>>
 {car_claim}
 [/INST]
