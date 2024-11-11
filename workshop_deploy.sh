@@ -1,4 +1,8 @@
 #!/bin/bash
+cd ./bootstrap/applicationset
+oc apply -f applicationset-bootstrap.yaml
+cd ../../
+
 cd ./demo
 ./demo_app_reset.sh
 ./setup.sh
