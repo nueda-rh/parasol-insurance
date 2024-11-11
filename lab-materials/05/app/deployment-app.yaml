@@ -41,7 +41,7 @@ spec:
             - name: PRESENCE_PENALTY
               value: "1.03"
             - name: POSTGRES_HOST
-              value: claimdb.ic-shared-db.svc.cluster.local
+              value: claimdb.$(NAMESPACE).svc.cluster.local
             - name: POSTGRES_DB
               valueFrom:
                 secretKeyRef:
