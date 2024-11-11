@@ -153,7 +153,7 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
                                         type="text"
                                         onChange={(_event, queryText) => setQueryText(queryText)}
                                         aria-label="query text input"
-                                        placeholder='質問をを入力して下さい。'
+                                        placeholder='質問を入力して下さい。'
                                         onKeyPress={event => {
                                             if (event.key === 'Enter') {
                                                 event.preventDefault();
@@ -164,14 +164,14 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
                                     <Flex>
                                         <FlexItem>
                                             <Tooltip
-                                                content={<div>新しいチャットをを開始</div>}
+                                                content={<div>新しいチャットを開始</div>}
                                             >
                                                 <Button variant="link" onClick={resetMessageHistory} aria-label='StartNewChat'><FontAwesomeIcon icon={faPlusCircle} /></Button>
                                             </Tooltip>
                                         </FlexItem>
                                         <FlexItem align={{ default: 'alignRight' }}>
                                             <Tooltip
-                                                content={<div>質問をを送信</div>}
+                                                content={<div>質問を送信</div>}
                                             >
                                                 <Button variant="link" onClick={sendQueryText} aria-label='SendQuery'><FontAwesomeIcon icon={faPaperPlane} /></Button>
                                             </Tooltip>
