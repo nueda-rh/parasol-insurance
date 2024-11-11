@@ -20,13 +20,12 @@ const Chat: React.FunctionComponent<{ claimSummary: string }> = ({ claimSummary 
     const [messageHistory, setMessageHistory] = React.useState<MessageHistory>([]);
 
     const wsUrl = config.backend_api_url.replace(/http/, 'ws').replace(/\/api$/, '/ws');
-    // const wsUrl = config.backend_api_url.replace(/http/, 'ws').replace(/-app-/, '-chatbot-').replace(/\/api$/, '');
 
     const connection = React.useRef<WebSocket | null>(null);
     const chatBotAnswer = document.getElementById('chatBotAnswer');
 
     React.useEffect(() => {
-        const ws = new WebSocket(wsUrl + '/chatbot') || {};
+        const ws = new WebSocket(wsUrl + '/query') || {};
 
         ws.onopen = () => {
             console.log('opened ws connection')
