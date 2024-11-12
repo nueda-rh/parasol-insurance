@@ -2,10 +2,11 @@
 include::_attributes.adoc[]
 
 ファインチューニングしたモデルをOpenShift AIを使ってデプロイしましょう。
-. {rhoai-short} Model Servingを使用します。
-. 新たなData Connectionを作成します
-.. あらかじめ準備されたものとほぼ同じ情報を使用します
-.. ただし、バケット名を `{user}` から `models` に変更します
+
+* {rhoai-short} Model Servingを使用します。
+* 新たなData Connectionを作成します
+** あらかじめ準備されたものとほぼ同じ情報を使用します
+** ただし、バケット名を `{user}` から `models` に変更します
 
 == データ接続の作成
 

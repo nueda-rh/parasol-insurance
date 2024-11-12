@@ -3,6 +3,11 @@ include::_attributes.adoc[]
 
 本ワークショップで扱った内容が、皆さんのLLMアプリケーションに必要な要素への理解に役立つものであったことを願っています。
 
+
+== {ic} 資料について
+
+このラボに関するフィードバックがある場合は、  https://github.com/rh-aiservices-bu/parasol-insurance/issues[Issues,window=_blank] および https://github.com/rh-aiservices-bu/parasol-insurance/pulls[Pull Requests,window=_blank] を使用してください。
+
 内容に問題がある場合フィードバックをいただけると、大変ありがたいです。
 
 == 謝辞

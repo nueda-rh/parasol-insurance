@@ -1,13 +1,6 @@
 = 更なる改善に向けて
 include::_attributes.adoc[]
 
-== {ic} 資料へ
-
-このラボに関するフィードバックがある場合は、  https://github.com/rh-aiservices-bu/parasol-insurance/issues[Issues,window=_blank] および https://github.com/rh-aiservices-bu/parasol-insurance/pulls[Pull Requests,window=_blank] を使用してください。
-
-ただし、このセクションは、{ic} の改善と改良を目的としたものではありません。代わりに、次の内容について説明します...
-
-
 == 提示されたプロトタイプについて
 
 この{ic}でお見せしたのは、改善点を示すために非常に簡単にまとめられた粗いプロトタイプです。
