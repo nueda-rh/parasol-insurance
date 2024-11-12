@@ -1,4 +1,4 @@
-= Notebook-Based LLM Example
+= NotebookでのLLM実行
 include::_attributes.adoc[]
 
 この演習では、ノートブックを使用して LLM の使用方法を調べます。

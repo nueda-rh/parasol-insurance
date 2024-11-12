@@ -1,4 +1,4 @@
-= Information Extraction
+= 情報の抽出
 include::_attributes.adoc[]
 
 請求処理の一環として、請求のテキストから情報を抽出したいと考えています。次のノートブックでは、LLM を使用してこのタスクを実行する方法を調べます。

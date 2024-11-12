@@ -1,4 +1,4 @@
-= Working with the {ocp} Terminal
+= OpenShift Terminal
 include::_attributes.adoc[]
 
 アプリケーションをデプロイするには、 {ocp} Web ターミナルを使用します。+

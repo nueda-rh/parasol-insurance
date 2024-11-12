@@ -1,12 +1,9 @@
-= Thank you for your participation
+= ご参加ありがとうございました！
 include::_attributes.adoc[]
 
-この間一緒に使用した資料が役に立ち、インテリジェント アプリケーションに何が含まれるかについて理解を深めていただければ幸いです。
+本ワークショップで扱った内容が、皆さんのLLMアプリケーションに必要な要素への理解に役立つものであったことを願っています。
 
-コンテンツに関する https://github.com/rh-aiservices-bu/parasol-insurance/issues[issues,window=_blank] に気付いた場合や、 https://github.com/rh-aiservices-bu/parasol-insurance/pulls[pull request,window=_blank] を送信したい場合は、ぜひお知らせください。
-
-
-この {ic} のインストラクションは、常に https://rh-aiservices-bu.github.io/parasol-insurance/[https://rh-aiservices-bu.github.io/parasol-insurance/,window=_blank] でご確認いただけます。このURLは、 {ic-lab} の改善を継続する中で新しいコンテンツに更新されますので、メモを取っておいてください。
+内容に問題がある場合フィードバックをいただけると、大変ありがたいです。
 
 == 謝辞
 

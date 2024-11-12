@@ -1,14 +1,14 @@
-= 環境の検証
+= ラボ環境の検証
 include::_attributes.adoc[]
 
-ワークベンチに接続したので、クラスタ内のすべての期待されるサービスが適切に反応していることを確認しましょう。
+ワークベンチに接続したので、クラスタ内のすべてのサービスが正常に動作しているか確認しましょう。
 
 ワークベンチで：
 
 . 左側のナビゲーションメニューで、次のフォルダに移動します：`parasol-insurance/lab-materials/02`
 . `02-05-validating.ipynb` というノートブックを開きます。
-. Jupyter NotebookでCellsを実行したことがない場合は、以下の操作が必要です。
-.. **Restart kernel and Run all Cells** リンクをクリックします。
+. Jupyter Notebook でセルを実行したことがない場合、以下の手順に従ってください:
+.. **Restart kernel and Run all Cells** をクリックします:
 +
 [.bordershadow]
 image::02/02-05-restart-and-run.png[]
@@ -32,11 +32,11 @@ Success: ModelMesh is reachable on modelmesh-serving.ic-shared-img-det.svc.clust
 Success: MilvusベクトルDB is reachable on vectordb-milvus.ic-shared-milvus.svc.cluster.local:19530
 ----
 
-このノートブックの出力が疑わしい場合は、 {ic} の開催者に連絡してください。
+正しい出力が得られない場合は、 {ic} のインストラクターに連絡してください。
 
-== 全体像
+== アーキテクチャ
 
-これは、環境がどのようにレイアウトされているかを視覚化した要約です。
+以下は本ハンズオン環境のアーキテクチャの全体像です。
 
 [.bordershadow]
 image::02/ic-eng-diag.drawio.svg[]

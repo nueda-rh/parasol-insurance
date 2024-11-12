@@ -1,5 +1,7 @@
-= Application Overview
+= アプリケーションの概要
 include::_attributes.adoc[]
+
+これまで見てきた要素を組み合わせ、社内のユーザーが利用可能なアプリケーションをデプロイしましょう。
 
 == アーキテクチャ
 
@@ -8,22 +10,23 @@ include::_attributes.adoc[]
 [.bordershadow]
 image::05/application-architecture.drawio.svg[]
 
-さまざまなコンポーネントは次のとおりです:
 
-- **フロントエンド**: Patternfly フレームワーク (React、Typescript) を使用して開発されたアプリケーション自体で、ユーザーのブラウザーで実行されます。
+- **フロントエンド**: Patternfly フレームワーク (React、Typescript) を使用して開発されたアプリケーションで、ユーザーのブラウザーで実行されます。
 - **バックエンド**: OpenShift 上のコンテナーで実行される Python FastAPI アプリケーション。データベース、LLM、およびオブジェクト ストレージとの通信を処理します。REST API を公開することで、フロントエンドとの通信を処理します。
-- **データベース**: OpenShift 上のコンテナーで実行される PostgreSQL データベース。クレームを保存します。
-- **LLM**: クレームから情報を要約および抽出するために使用される言語モデル。バックエンドによって API を通じて使用されます。
+- **データベース**: OpenShift 上のコンテナーで実行される PostgreSQL データベース。請求文書を保存します。
+- **LLM**: 請求文書から情報を要約および抽出するために使用される言語モデル。バックエンドアプリから API を通じて使用されます。
 - **VectorDB**: RAGパートで検索用に文書を保存するために使用されるベクトルデータベース。Milvusをベースにしています。
-- **オブジェクト ストレージ**: S3 互換のオブジェクト ストレージ。クレーム画像を保存します。
+- **オブジェクト ストレージ**: S3 互換のオブジェクト ストレージ。画像を保存します。
 
-== アプリケーション コード
+== アプリケーション コードの確認 （オプション）
 
-アプリケーションのコードを確認したい場合は、 {rhoai} から直接行うことができます。
+このパートはオプション演習となります。そのため一旦スキップし、あとで実行することも可能です。  
 
-- ブラウザーでまだ開いている可能性のあるさまざまな Jupyter タブを閉じます。
+実行するアプリケーションのコードを確認したい場合は、 {rhoai} から確認ができます。
+
+- ブラウザーで開いている既存のJupyter Notebookタブを閉じます。
 - {rhoai} ダッシュボードに戻ります
-- トグルを使用してワークベンチを停止します。
+- トグルをクリックし、ワークベンチを停止します。
 
 +
 [.bordershadow]
@@ -31,25 +34,25 @@ image::05/05-toggle-off-workbench.jpg[]
 
 
 
--- 完全に停止するには、おそらく 5 秒から 10 秒かかります。
+- 完全に停止するには、おそらく 5 秒から 10 秒かかります。
 
-- 右側の縦に3つ並んだドットをクリックしてワークベンチの構成を編集し、 **Edit workbench** ボタンを選択します。
+- 右側の縦に3つ並んだドットをクリックして、**Edit workbench** ボタンを選択します。
 +
 [.bordershadow]
 image::05/stop-workbench.png[]
 
-- イメージ セクションで、イメージを `CUSTOM - VSCode for {ic}` に変更します。:
+- Image セクションで、利用するコンテナイメージを `CUSTOM - VSCode for {ic}` に変更します。:
 +
 [.bordershadow]
 image::05/05-change-to-vscode.jpg[]
-- Note that this is a Custom-built image added in this particular {ic-lab} to illustrate the flexibility of the {rhoai} platform. Not everyone wants to use Jupyter Notebooks for everything.
+- これは、この特定の{ic-lab}に追加されたカスタムビルドのイメージです。{rhoai}プラットフォームではJupyter NotebookだけではなくVSCode Serverも利用することができます。
 
-- Then click on `Update workbench` at the bottom of the page:
+- ページ下部の「Update workbench」をクリックしてください。
 +
 [.bordershadow]
 image::05/update-workbench.png[]
 
-- トグルを使用してワークベンチを再度起動できるようになりました。
+- トグルを使用してワークベンチを再起動しましょう。
 - ワークベンチが起動したら、**Open** リンクをクリックします。
 - VSCode IDE にリダイレクトされます。
 - ログインして承認を受け入れると、VSCode が開きます。
@@ -59,7 +62,7 @@ image::05/update-workbench.png[]
 [.bordershadow]
 image::05/trust-vscode.png[]
 
-* *Welcome* タブを閉じると、使い慣れた VSCode 環境に戻ります。
+* *Welcome* タブを閉じると、VSCode 環境が表示されます。
 * 永続ボリュームは、この新しい環境に自動的に再接続されました。
 ** したがって、Jupyter 環境で作成したすべてのデータは引き続き利用できます
 ** VSCode はデフォルトで隠しファイルを表示するため、より多くのファイルを表示できますが、Jupyter ではそうではありません。
@@ -68,6 +71,6 @@ image::05/trust-vscode.png[]
 [.bordershadow]
 image::05/app-code.png[]
 
-もちろん、これは完全な VSCode 環境であるため、ローカルの VSCode インストールと同じ方法で構成できます。ワークベンチを停止して再起動したときに永続化される拡張機能をインストールしたり、独自のキーバインドを構成したりできます。
+この環境は完全な VSCode 環境であるため、ローカルの VSCode インストールと同じ方法で構成を変更できます。例えば、拡張機能をインストールしたり、独自のキーバインドを構成したりできます。
 
-アプリケーションはすでにコンテナー イメージとして構築されており、GitOps を使用してデプロイする準備が整いました。次のセクションに進むことができます。
+アプリケーションはすでにコンテナー イメージとしてビルドされているため、コードの確認が完了したら次のセクションへと進みましょう。

@@ -1,4 +1,4 @@
-= Text Summarization
+= テキスト要約
 include::_attributes.adoc[]
 
 請求処理の一環として、請求のテキストを要約します。次のノートブックでは、LLM を使用してこのタスクを実行する方法を調べます。

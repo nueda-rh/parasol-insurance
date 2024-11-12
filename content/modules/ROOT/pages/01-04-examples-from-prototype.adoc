@@ -1,39 +1,39 @@
-= Examples from prototyping work
+= プロトタイプの例
 include::_attributes.adoc[]
 
-以下の例は、改善されたプロセスのプロトタイプ バージョンを通じて達成したいと考えているものです。
+以下の例は、プロセス改良を通じて実現したいことです。
 
-== テキスト要約に LLM を使用する
+== LLMによるテキスト要約
 
-* 請求査定担当者が迅速に読み取れる
+* 請求査定担当者による迅速な読み取りを可能にする。
 +
 [.bordershadow]
 image::01/proto-summary.png[test image]
 
-== 情報抽出に LLM を使用する
+== LLMによる情報の抽出
 
-* データベースのより良いデータ入力のために重要な情報を抽出
+* より良いデータベース作成のために、重要な情報を抽出する。
 +
 [.bordershadow]
 image::01/proto-info-extract.png[ info extraction]
 
-== 感情分析に LLM を使用する
+== LLMによる感情分析
 
-* テキストの感情を検出し、それに基づいて行動する。
+* 文章の意図を察知し、それに基づき行動する。
 +
 [.bordershadow]
 image::01/proto-sentiment-analysis.png[]
 
-== 画像認識を使用して車両を写真に収める
+== 画像認識による車両写真の確認
 
-* 顧客から提供された画像を分析する
+* 顧客により提供された写真を分析する。
 +
 [.bordershadow]
 image::01/proto-car-recog.png[]
 
-== 画像認識を使用して損傷を検出
+== 画像認識による損傷の検出
 
-* 画像に基づく損傷の評価
+* 写真を元にした損傷具合の評価
 +
 [.bordershadow]
 image::01/proto-accident-grading.png[]
