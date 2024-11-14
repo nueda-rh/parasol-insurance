@@ -1,5 +1,11 @@
 # OpenShift AI Unleashed: Transforming Claims Processing for Maximum Efficiency!
 
+## 日本語版のデプロイ方法
+* RHDPでオリジナルのParasol Insuranceラボを払い出す
+* ocコマンドが実行可能なLinux環境を準備し、OpenShiftクラスタにAdminでログイン
+* `workshop_deploy.sh`を実行
+
+
 ## Introduction
 
 This repository contains the code, instructions, resources and materials associated with the Lab called **OpenShift AI Unleashed: Transforming Claims Processing for Maximum Efficiency!**.
