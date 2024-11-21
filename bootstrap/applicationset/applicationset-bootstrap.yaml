@@ -23,6 +23,11 @@ spec:
             targetRevision: translation-jp
             path: bootstrap/ic-shared-llm
           - cluster: in-cluster
+            name: ic-shared-llm-ds-app
+            repoURL: https://github.com/nueda-rh/parasol-insurance.git
+            targetRevision: nu
+            path: bootstrap/ic-shared-llm-ds
+          - cluster: in-cluster
             name: ic-shared-img-det
             repoURL: https://github.com/rh-aiservices-bu/parasol-insurance.git
             targetRevision: main
