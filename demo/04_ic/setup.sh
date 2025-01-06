@@ -68,6 +68,7 @@ while true; do git push demo translation-jp:main 2>/dev/null; if [ $? -eq 0 ]; t
 #while true; do oc get secret/aws-connection-shared-minio -n ${USER} 2>&1 | grep "not found" 1>/dev/null 2>&1; if [ $? -eq 0 ]; then echo "secret/aws-connection-shared-minio does not exist yet. waiting..."; sleep 3; continue; else break; fi; done
 
 oc apply -f secret_aws-connection-shared-minio.yaml -n ic-shared-llm
+oc delete -f job_setup_objectstorage.yaml -n ic-shared-llm
 oc apply -f job_setup_objectstorage.yaml -n ic-shared-llm
 while true; do oc get job/setup-objectstorage -n ic-shared-llm 2>&1 | grep "not found" 1>/dev/null 2>&1; if [ $? -eq 0 ]; then echo "job/setup-objectstorage does not exist yet. waiting..."; sleep 3; continue; else break; fi; done
 oc wait --for=jsonpath='{.status.ready}'=1 --timeout 20m job/setup-objectstorage -n ic-shared-llm
