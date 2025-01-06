@@ -15,7 +15,7 @@ spec:
           - cluster: in-cluster
             name: ic-shared-database-app
             repoURL: https://github.com/team-ohc-jp-place/parasol-insurance.git
-            targetRevision: translation-jp
+            targetRevision: nu
             path: bootstrap/ic-shared-database
           - cluster: in-cluster
             name: ic-shared-llm-app
@@ -50,7 +50,7 @@ spec:
           - cluster: in-cluster
             name: ic-shared-app
             repoURL: https://github.com/team-ohc-jp-place/parasol-insurance.git
-            targetRevision: translation-jp
+            targetRevision: nu
             path: bootstrap/ic-shared-app
   template:
     metadata:
