@@ -20,7 +20,7 @@ while true; do oc get statefulset/ic-chatbot -n ic-shared-app 2>&1 | grep "not f
 oc wait --for=jsonpath='{.status.availableReplicas}'=1 --timeout 10m statefulset/ic-chatbot -n ic-shared-app
 while true; do oc get deployment/maven -n ic-shared-app 2>&1 | grep "not found" 1>/dev/null 2>&1; if [ $? -eq 0 ]; then echo "deployment/maven does not exist yet. waiting..."; sleep 3; continue; else break; fi; done
 oc wait --for=jsonpath='{.status.availableReplicas}'=1 --timeout 10m deployment/maven -n ic-shared-app
-git_url="https://github.com/team-ohc-jp-place/parasol-insurance"
+git_url="https://github.com/nueda-rh/parasol-insurance"
 oc exec statefulset/ic-chatbot -c insurance-claim-app -n ic-shared-app -- git clone -b translation-jp ${git_url}
 oc exec statefulset/ic-chatbot -c insurance-claim-app -n ic-shared-app -- mkdir -p /home/coder/.m2
 oc cp settings.xml ic-chatbot-0:/home/coder/.m2/settings.xml -c insurance-claim-app -n ic-shared-app
